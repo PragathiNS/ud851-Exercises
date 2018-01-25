@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onClickOpenAddressButton(View v) {
         // COMPLETED (5) Store an address in a String
-        String address = "India";
+        String address = "New York";
         // COMPLETED (6) Use Uri.Builder with the appropriate scheme and query to form the Uri for the address
         Uri.Builder builder = new Uri.Builder();
         builder
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         // COMPLETED (3) Set the data of the Intent to the Uri passed into this method
         intent.setData(url);
+        System.out.println(url);
         // COMPLETED (4) Verify that this Intent can be launched and then call startActivity
         if (intent.resolveActivity(getPackageManager()) != null){
             startActivity(intent);
